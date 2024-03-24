@@ -30,7 +30,7 @@ services:
         links:
             - database
         ports:
-            - 8082:80
+            - 8084:80
         environment:
             PMA_HOST: database
             PMA_USER: phpmyadmin

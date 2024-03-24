@@ -2,11 +2,11 @@
 FROM php:8.2.16-cli-bookworm
 
 RUN apt update
-RUN apt install -y git zip curl \ 
+RUN apt install -y git curl libzip-dev zip \ 
     ca-certificates gnupg
     # cron
 
-RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install zip pdo_mysql
 
 # install swoole
 # RUN pecl install swoole && docker-php-ext-enable swoole
